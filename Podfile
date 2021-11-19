@@ -1,4 +1,4 @@
-target 'Gathern' do
+target 'TheWeather' do
   pod 'SVProgressHUD'
   pod 'ObjectMapper'
   pod 'IQKeyboardManagerSwift'
