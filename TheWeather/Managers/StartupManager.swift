@@ -8,18 +8,23 @@
 import UIKit
 import IQKeyboardManagerSwift
 import SVProgressHUD
-
+import GoogleMaps
 class StartupManager: NSObject {
 
     static let shared = StartupManager()
     
     func run(){
+        configureGoogleMaps()
         
         startAppView()
 
         configureKeyboard()
         
         configureProgress()
+    }
+    
+    func configureGoogleMaps(){
+        GMSServices.provideAPIKey(AppConstant.googleAPIKey)
     }
     
     /// initialize main window and set the root view controller with the first screen

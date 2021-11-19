@@ -7,13 +7,20 @@
 
 import Foundation
 import ObjectMapper
+import CoreLocation
 
 class WeatherDetailsResponse : APIResponse {
     var data : WeatherDetails?
-  
+    var locationLat :Double?
+    var locationLng :Double?
+    var location : CLLocationCoordinate2D {
+        return CLLocationCoordinate2D.init(latitude: locationLat ?? 0.0 , longitude: locationLng ?? 0.0)
+    }
    override func mapping(map: Map) {
        super.mapping(map: map)
        data <- map["current"]
+       locationLat <- map["location.lat"]
+       locationLng <- map["location.lon"]
     }
 }
 class WeatherDetails : NSObject , Mappable {

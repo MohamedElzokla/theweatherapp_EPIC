@@ -5,5 +5,6 @@ target 'TheWeather' do
   pod 'ObjectMapper'
   pod 'IQKeyboardManagerSwift'
   pod 'SDWebImage'
+  pod 'GoogleMaps'
 
 end

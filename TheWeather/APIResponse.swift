@@ -17,7 +17,7 @@ class APIResponse : NSObject,Mappable{
     }
     func mapping(map: Map) {
         errorMessage <- map["error.message"]
-        isSuccess = (errorMessage?.isEmpty ?? false)
+        isSuccess = (errorMessage?.isEmpty ?? true)
     }
    
 }

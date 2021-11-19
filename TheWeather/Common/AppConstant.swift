@@ -11,6 +11,7 @@ enum ConfigurationMode {
     case production
 }
 struct AppConstant {
+    static var googleAPIKey = "AIzaSyBTIUFP-zhf1f_jZCQLlOsgDwb_W7nyyzM"
     static var configurationMode : ConfigurationMode = .production
     static var DOMAIN :String{
          if configurationMode == .development{

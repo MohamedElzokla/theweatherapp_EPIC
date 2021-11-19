@@ -15,15 +15,23 @@ class LocationInputVC : BaseViewController {
         super.viewDidLoad()
         title = "LocationInputVC.title".localized()
     }
+   
     private func geocodeAddressString(inputAddress:String){
         showLoadingIndicator()
         APIClient.getWeatherData(query: inputAddress) { [weak self] response in
             self?.hideLoadingIndicator()
             if response?.isSuccess ?? false{
-                
+                self?.openDetails(response: response)
             }else{
                 self?.showAlert(response: response)
             }
+        }
+    }
+    private func openDetails(response:WeatherDetailsResponse?){
+        if let vc = UIViewController.storyboardViewController(storyBoardName: .main, identifier: "WeatherDetailsVC") as? WeatherDetailsVC{
+            vc.response = response
+            self.navigationController?.pushViewController(vc, animated: true)
+
         }
     }
     //MARK: - UI helpers

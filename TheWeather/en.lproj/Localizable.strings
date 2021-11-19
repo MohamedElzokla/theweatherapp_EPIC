@@ -12,6 +12,14 @@
 "LocationInputVC.goBtn.title"="Go!";
 "LocationInputVC.empty.address.alert"="Please enter address first!";
 
+//WeatherDetailsVC
+"WeatherDetailsVC.temp.title"="Temperature (in F)";
+"WeatherDetailsVC.pressure.title"="Pressure (in millibars)";
+"WeatherDetailsVC.humidity.title"="Humidity";
+"WeatherDetailsVC.condition.title"="Condition";
+"WeatherDetailsVC.precipitation.title"="Precipitation (in millimeters)";
+"WeatherDetailsVC.title"="Details";
+
 //alert
 "alert.title"="Alert";
 "alert.close"="Close";
