@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TheWeather
+
+  Created by mohamed ahmed on 19/11/2021.
+  
+*/
+
+"LocationFetcher.hintLabel.text"="Please type the address you want to check its weather";
