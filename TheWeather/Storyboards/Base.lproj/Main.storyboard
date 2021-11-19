@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kda-9l-hBS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,36 +8,98 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Location InputVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationInputVC" id="BYZ-38-t0r" customClass="LocationInputVC" customModule="TheWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LA-dK-ItP">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-aq-Dsk">
+                                <rect key="frame" x="16" y="100" width="382" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="LocationFetcher.hintLabel.text"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-EE-1eR">
+                                <rect key="frame" x="16" y="135.5" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHV-PN-k3f">
+                                <rect key="frame" x="338" y="135.5" width="60" height="34"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rQm-Qc-47E"/>
+                                    <constraint firstAttribute="width" constant="60" id="uws-DB-ZyY"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="LocationInputVC.goBtn.title"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addressGoBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="FbI-9Z-wGp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3LA-dK-ItP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BsM-sa-6lu"/>
-                            <constraint firstItem="3LA-dK-ItP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgo-ch-apF"/>
+                            <constraint firstItem="SHV-PN-k3f" firstAttribute="leading" secondItem="P7l-EE-1eR" secondAttribute="trailing" constant="8" symbolic="YES" id="3zF-ld-rbi"/>
+                            <constraint firstItem="SHV-PN-k3f" firstAttribute="centerY" secondItem="P7l-EE-1eR" secondAttribute="centerY" id="Mhz-L5-xGD"/>
+                            <constraint firstItem="P7l-EE-1eR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="apo-iP-7Am"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Z7-aq-Dsk" secondAttribute="trailing" constant="16" id="ckd-Ok-eSa"/>
+                            <constraint firstItem="3Z7-aq-Dsk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="pOi-Qu-2wa"/>
+                            <constraint firstItem="3Z7-aq-Dsk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r5g-Wa-eqE"/>
+                            <constraint firstItem="P7l-EE-1eR" firstAttribute="top" secondItem="3Z7-aq-Dsk" secondAttribute="bottom" constant="16" id="rUF-ci-Lpq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SHV-PN-k3f" secondAttribute="trailing" constant="16" id="wmJ-Xn-wdc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="klI-Wn-8nZ"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="P7l-EE-1eR" id="LuK-mG-FPL"/>
+                        <outlet property="goBtn" destination="SHV-PN-k3f" id="MJA-DQ-8jf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="98"/>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fbd-Ka-Xcg">
+            <objects>
+                <navigationController storyboardIdentifier="LocationInputNVC" automaticallyAdjustsScrollViewInsets="NO" id="kda-9l-hBS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dpK-c9-BLx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZtR-pf-tVF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amf-eS-bjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

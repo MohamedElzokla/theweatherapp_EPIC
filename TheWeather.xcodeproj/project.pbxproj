@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2094CA27481B2300692EFE /* UiButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094C927481B2300692EFE /* UiButton+Extension.swift */; };
+		CE2094CC27481D6100692EFE /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094CB27481D6100692EFE /* Util.swift */; };
+		CE2094D12748269000692EFE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D02748269000692EFE /* LocationManager.swift */; };
+		CE2094D327483F4C00692EFE /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D227483F4C00692EFE /* AppConstant.swift */; };
+		CE2094D527483F9200692EFE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D427483F9200692EFE /* APIClient.swift */; };
+		CE2094D7274843F100692EFE /* WeatherDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */; };
+		CE2094D9274845AC00692EFE /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D8274845AC00692EFE /* APIResponse.swift */; };
 		CE388206274808C200D4FDF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388205274808C200D4FDF9 /* AppDelegate.swift */; };
 		CE38820D274808C200D4FDF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38820B274808C200D4FDF9 /* Main.storyboard */; };
 		CE38820F274808C300D4FDF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE38820E274808C300D4FDF9 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 		07E3537BB1C5D515043F3E47 /* Pods-TheWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWeather.release.xcconfig"; path = "Target Support Files/Pods-TheWeather/Pods-TheWeather.release.xcconfig"; sourceTree = "<group>"; };
 		0C630D91847BF4D00F767FB3 /* Pods_TheWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B00F61AF3299A889FB7BF31 /* Pods-TheWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheWeather.debug.xcconfig"; path = "Target Support Files/Pods-TheWeather/Pods-TheWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		CE2094C927481B2300692EFE /* UiButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiButton+Extension.swift"; sourceTree = "<group>"; };
+		CE2094CB27481D6100692EFE /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		CE2094D02748269000692EFE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CE2094D227483F4C00692EFE /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		CE2094D427483F9200692EFE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsResponse.swift; sourceTree = "<group>"; };
+		CE2094D8274845AC00692EFE /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		CE388202274808C200D4FDF9 /* TheWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE388205274808C200D4FDF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE38820C274808C200D4FDF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +120,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE2094CD27481DAD00692EFE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE38824327480E2B00D4FDF9 /* Alias.swift */,
+				CE2094CB27481D6100692EFE /* Util.swift */,
+				CE2094D227483F4C00692EFE /* AppConstant.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		CE3881F9274808C200D4FDF9 = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				CE388205274808C200D4FDF9 /* AppDelegate.swift */,
-				CE38824327480E2B00D4FDF9 /* Alias.swift */,
+				CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */,
+				CE2094D8274845AC00692EFE /* APIResponse.swift */,
+				CE2094CD27481DAD00692EFE /* Common */,
 				CE38824027480CEC00D4FDF9 /* Extensions */,
 				CE38823D27480C7C00D4FDF9 /* Managers */,
 				CE388237274808F400D4FDF9 /* Controllers */,
@@ -183,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				CE38823927480A2300D4FDF9 /* StartupManager.swift */,
+				CE2094D02748269000692EFE /* LocationManager.swift */,
+				CE2094D427483F9200692EFE /* APIClient.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -194,6 +222,7 @@
 				CE38824127480DEF00D4FDF9 /* UIApplication+Extension.swift */,
 				CE3882472748146E00D4FDF9 /* UIView+Extension.swift */,
 				CE3882492748153500D4FDF9 /* UILabel+Extension.swift */,
+				CE2094C927481B2300692EFE /* UiButton+Extension.swift */,
 				CE38824D2748187500D4FDF9 /* String+Extension.swift */,
 			);
 			path = Extensions;
@@ -389,11 +418,18 @@
 				CE3882482748146E00D4FDF9 /* UIView+Extension.swift in Sources */,
 				CE388236274808E800D4FDF9 /* BaseViewController.swift in Sources */,
 				CE38824227480DEF00D4FDF9 /* UIApplication+Extension.swift in Sources */,
+				CE2094D9274845AC00692EFE /* APIResponse.swift in Sources */,
+				CE2094D7274843F100692EFE /* WeatherDetailsResponse.swift in Sources */,
 				CE38824427480E2B00D4FDF9 /* Alias.swift in Sources */,
 				CE388206274808C200D4FDF9 /* AppDelegate.swift in Sources */,
+				CE2094CC27481D6100692EFE /* Util.swift in Sources */,
+				CE2094D527483F9200692EFE /* APIClient.swift in Sources */,
+				CE2094CA27481B2300692EFE /* UiButton+Extension.swift in Sources */,
+				CE2094D327483F4C00692EFE /* AppConstant.swift in Sources */,
 				CE38824627480EA700D4FDF9 /* LocationInputVC.swift in Sources */,
 				CE38824E2748187500D4FDF9 /* String+Extension.swift in Sources */,
 				CE38824A2748153500D4FDF9 /* UILabel+Extension.swift in Sources */,
+				CE2094D12748269000692EFE /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +621,7 @@
 				DEVELOPMENT_TEAM = 999448MWZF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheWeather/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Gatherin App needs to access location to get nearest result";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -614,6 +651,7 @@
 				DEVELOPMENT_TEAM = 999448MWZF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheWeather/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Gatherin App needs to access location to get nearest result";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

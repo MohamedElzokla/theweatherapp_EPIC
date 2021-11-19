@@ -6,4 +6,17 @@
   
 */
 
+//LocationInputVC
 "LocationFetcher.hintLabel.text"="Please type the address you want to check its weather";
+"LocationInputVC.title"="Location Input";
+"LocationInputVC.goBtn.title"="Go!";
+"LocationInputVC.empty.address.alert"="Please enter address first!";
+
+//alert
+"alert.title"="Alert";
+"alert.close"="Close";
+
+//error messages
+"error.networkerror"="Please check your internet connection first!";
+"error.api.failure"="Request failed please try again later";
+

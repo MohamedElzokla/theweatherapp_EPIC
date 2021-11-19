@@ -7,16 +7,19 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 class StartupManager: NSObject {
 
-    static var shared = StartupManager()
+    static let shared = StartupManager()
     
     func run(){
         
         startAppView()
 
         configureKeyboard()
+        
+        configureProgress()
     }
     
     /// initialize main window and set the root view controller with the first screen
@@ -29,6 +32,10 @@ class StartupManager: NSObject {
     /// Globally enable keyboard manager
     private func configureKeyboard(){
         IQKeyboardManager.shared.enable = true
+    }
+    
+    private func configureProgress(){
+        SVProgressHUD.setDefaultMaskType(.black)
     }
     
     
