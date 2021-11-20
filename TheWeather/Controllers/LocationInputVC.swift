@@ -52,4 +52,15 @@ class LocationInputVC : BaseViewController {
             }
         })
     }
+    
+    @IBAction private func myWeatherBtnAction(){
+        LocationManager.shared.getLocation { [weak self](bean, success) in
+            if success , let bean = bean {
+                self?.geocodeAddressString(inputAddress: "\(bean.locationCoordinate?.latitude ?? 0.0),\(bean.locationCoordinate?.longitude ?? 0.0)")
+            }
+        }
+    }
+    @IBAction private func closeKeyboard(){
+        self.view.endEditing(true)
+    }
 }

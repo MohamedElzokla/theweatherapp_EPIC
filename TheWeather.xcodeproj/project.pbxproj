@@ -15,6 +15,7 @@
 		CE2094D7274843F100692EFE /* WeatherDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */; };
 		CE2094D9274845AC00692EFE /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094D8274845AC00692EFE /* APIResponse.swift */; };
 		CE2094DB27484EAE00692EFE /* WeatherDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094DA27484EAE00692EFE /* WeatherDetailsVC.swift */; };
+		CE2094DD274862C200692EFE /* LocationBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2094DC274862C200692EFE /* LocationBean.swift */; };
 		CE388206274808C200D4FDF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388205274808C200D4FDF9 /* AppDelegate.swift */; };
 		CE38820D274808C200D4FDF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38820B274808C200D4FDF9 /* Main.storyboard */; };
 		CE38820F274808C300D4FDF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE38820E274808C300D4FDF9 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsResponse.swift; sourceTree = "<group>"; };
 		CE2094D8274845AC00692EFE /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		CE2094DA27484EAE00692EFE /* WeatherDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsVC.swift; sourceTree = "<group>"; };
+		CE2094DC274862C200692EFE /* LocationBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationBean.swift; sourceTree = "<group>"; };
 		CE388202274808C200D4FDF9 /* TheWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE388205274808C200D4FDF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE38820C274808C200D4FDF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				CE388205274808C200D4FDF9 /* AppDelegate.swift */,
 				CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */,
 				CE2094D8274845AC00692EFE /* APIResponse.swift */,
+				CE2094DC274862C200692EFE /* LocationBean.swift */,
 				CE2094CD27481DAD00692EFE /* Common */,
 				CE38824027480CEC00D4FDF9 /* Extensions */,
 				CE38823D27480C7C00D4FDF9 /* Managers */,
@@ -438,6 +441,7 @@
 				CE38823A27480A2300D4FDF9 /* StartupManager.swift in Sources */,
 				CE3882482748146E00D4FDF9 /* UIView+Extension.swift in Sources */,
 				CE388236274808E800D4FDF9 /* BaseViewController.swift in Sources */,
+				CE2094DD274862C200692EFE /* LocationBean.swift in Sources */,
 				CE38824227480DEF00D4FDF9 /* UIApplication+Extension.swift in Sources */,
 				CE2094D9274845AC00692EFE /* APIResponse.swift in Sources */,
 				CE2094D7274843F100692EFE /* WeatherDetailsResponse.swift in Sources */,
@@ -643,7 +647,8 @@
 				DEVELOPMENT_TEAM = 999448MWZF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheWeather/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Gatherin App needs to access location to get nearest result";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "{PRODUCT_MODULE_NAME} App needs to access location to get weather result";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "{MODULE_NAME} App needs to access location to get weather result";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -673,7 +678,8 @@
 				DEVELOPMENT_TEAM = 999448MWZF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TheWeather/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Gatherin App needs to access location to get nearest result";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "{PRODUCT_MODULE_NAME} App needs to access location to get weather result";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "{MODULE_NAME} App needs to access location to get weather result";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

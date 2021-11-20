@@ -26,16 +26,16 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type address here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-EE-1eR">
-                                <rect key="frame" x="16" y="135.5" width="314" height="34"/>
+                                <rect key="frame" x="16" y="135.5" width="294" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="street-address"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHV-PN-k3f">
-                                <rect key="frame" x="338" y="135.5" width="60" height="34"/>
+                                <rect key="frame" x="318" y="135.5" width="80" height="34"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="rQm-Qc-47E"/>
-                                    <constraint firstAttribute="width" constant="60" id="uws-DB-ZyY"/>
+                                    <constraint firstAttribute="width" constant="80" id="uws-DB-ZyY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
@@ -51,19 +51,65 @@
                                     <action selector="addressGoBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="FbI-9Z-wGp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxc-dj-uSc">
+                                <rect key="frame" x="194" y="201.5" width="26" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nI-Zp-JSU">
+                                <rect key="frame" x="16" y="239.5" width="382" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="LocationFetcher.hintLabel2.text"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spk-vb-SQc">
+                                <rect key="frame" x="173.5" y="291" width="67" height="34"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="OIB-FD-kxU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="LocationInputVC.goCurrentBtn.title"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="myWeatherBtnAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="guV-0m-P9x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="spk-vb-SQc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="15Y-rd-Mu7"/>
                             <constraint firstItem="SHV-PN-k3f" firstAttribute="leading" secondItem="P7l-EE-1eR" secondAttribute="trailing" constant="8" symbolic="YES" id="3zF-ld-rbi"/>
+                            <constraint firstItem="2nI-Zp-JSU" firstAttribute="top" secondItem="Zxc-dj-uSc" secondAttribute="bottom" constant="16" id="6pP-UY-fYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2nI-Zp-JSU" secondAttribute="trailing" constant="16" id="Dx6-hC-R8S"/>
                             <constraint firstItem="SHV-PN-k3f" firstAttribute="centerY" secondItem="P7l-EE-1eR" secondAttribute="centerY" id="Mhz-L5-xGD"/>
                             <constraint firstItem="P7l-EE-1eR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="apo-iP-7Am"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Z7-aq-Dsk" secondAttribute="trailing" constant="16" id="ckd-Ok-eSa"/>
+                            <constraint firstItem="Zxc-dj-uSc" firstAttribute="top" secondItem="P7l-EE-1eR" secondAttribute="bottom" constant="32" id="ep6-UB-tU1"/>
+                            <constraint firstItem="Zxc-dj-uSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gNS-iG-XS2"/>
+                            <constraint firstItem="spk-vb-SQc" firstAttribute="top" secondItem="2nI-Zp-JSU" secondAttribute="bottom" constant="32" id="nx3-7X-3Tn"/>
                             <constraint firstItem="3Z7-aq-Dsk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="pOi-Qu-2wa"/>
                             <constraint firstItem="3Z7-aq-Dsk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r5g-Wa-eqE"/>
                             <constraint firstItem="P7l-EE-1eR" firstAttribute="top" secondItem="3Z7-aq-Dsk" secondAttribute="bottom" constant="16" id="rUF-ci-Lpq"/>
+                            <constraint firstItem="2nI-Zp-JSU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="vrs-uV-9jS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SHV-PN-k3f" secondAttribute="trailing" constant="16" id="wmJ-Xn-wdc"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HPY-kS-KA5" appends="YES" id="pC2-Qq-Fce"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="klI-Wn-8nZ"/>
                     <connections>
@@ -72,6 +118,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HPY-kS-KA5">
+                    <connections>
+                        <action selector="closeKeyboard" destination="BYZ-38-t0r" id="eiW-kT-dmM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
         </scene>
@@ -87,10 +138,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-YA-cRK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="440"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P1v-Sl-gtC">
-                                                <rect key="frame" x="20" y="20" width="374" height="400"/>
+                                                <rect key="frame" x="20" y="20" width="374" height="410"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2c-f6-JGz">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
@@ -181,10 +232,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="34h-da-IBN">
-                                                        <rect key="frame" x="0.0" y="320" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="320" width="374" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki2-h8-kP6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -192,19 +243,27 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="WeatherDetailsVC.condition.title"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-El-2GI">
-                                                                <rect key="frame" x="332.5" y="0.0" width="41.5" height="40"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mGl-uK-v5X">
+                                                                <rect key="frame" x="284.5" y="0.0" width="89.5" height="50"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-X3-pNf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="40" id="ZNb-bl-e61"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7X-El-2GI">
+                                                                        <rect key="frame" x="48" y="0.0" width="41.5" height="50"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="ITF-8j-Tzk"/>
-                                                        </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="GwC-AB-mnw">
-                                                        <rect key="frame" x="0.0" y="360" width="374" height="40"/>
+                                                        <rect key="frame" x="0.0" y="370" width="374" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCY-TR-aXO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40.5" height="40"/>
@@ -258,6 +317,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hxr-Jv-lNY"/>
                     <connections>
+                        <outlet property="conditionImageView" destination="A2Y-X3-pNf" id="7Bs-Xl-dMe"/>
                         <outlet property="conditionLabel" destination="o7X-El-2GI" id="xmm-74-XQS"/>
                         <outlet property="humidityLabel" destination="e7F-Xi-prc" id="gZY-bK-BPc"/>
                         <outlet property="mapView" destination="qUb-Q6-5S1" id="bcC-zL-BBR"/>

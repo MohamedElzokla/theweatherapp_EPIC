@@ -7,9 +7,11 @@
 */
 
 //LocationInputVC
-"LocationFetcher.hintLabel.text"="Please type the address you want to check its weather";
+"LocationFetcher.hintLabel.text"="Please type the address you want to check its weather details";
+"LocationFetcher.hintLabel2.text"="Get weather details for my location";
 "LocationInputVC.title"="Location Input";
-"LocationInputVC.goBtn.title"="Go!";
+"LocationInputVC.goBtn.title"="Show!";
+"LocationInputVC.goCurrentBtn.title"="Show for my location";
 "LocationInputVC.empty.address.alert"="Please enter address first!";
 
 //WeatherDetailsVC
@@ -28,3 +30,5 @@
 "error.networkerror"="Please check your internet connection first!";
 "error.api.failure"="Request failed please try again later";
 
+//Location Manager
+"LocationManager.ask.permission" = "Weather app need permission to location service to get weather details. You can allow this from settings";

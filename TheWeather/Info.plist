@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>{MODULE_NAME} App needs to access location to get weather result</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>{MODULE_NAME} App needs to access location to get weather result</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

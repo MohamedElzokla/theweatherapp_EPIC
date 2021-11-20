@@ -31,7 +31,7 @@ class WeatherDetails : NSObject , Mappable {
     var conditionStatus :String?
     var conditionStatusImage : String?
     var conditionStatusImageUrl : URL?{
-        return conditionStatusImage?.url()
+        return "https:\(conditionStatusImage ?? "")".url()
     }
 
     
