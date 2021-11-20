@@ -37,7 +37,7 @@ class WeatherDetailsVC: BaseViewController {
         tempLabel?.text = String(format: "%.1f", response?.data?.temp ?? 0.0)
         pressureLabel?.text = String(format: "%.1f", response?.data?.pressure ?? 0.0)
         conditionLabel?.text = response?.data?.conditionStatus
-        humidityLabel?.text = String(format: "%.1f", response?.data?.humidity ?? 0.0)
+        humidityLabel?.text = String(format: "%.1f%@", response?.data?.humidity ?? 0.0, "%" )
         precipitationLabel?.text = String(format: "%.1f", response?.data?.precipitation ?? 0.0)
         conditionImageView?.sd_setImage(with: response?.data?.conditionStatusImageUrl, completed: nil)
     }
