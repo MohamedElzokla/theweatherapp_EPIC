@@ -18,6 +18,7 @@ class WeatherDetailsVC: BaseViewController {
     @IBOutlet weak var conditionLabel : UILabel?
     @IBOutlet weak var conditionImageView : UIImageView?
     @IBOutlet weak var precipitationLabel : UILabel?
+    @IBOutlet weak var areaLabel : UILabel?
 
     var response:WeatherDetailsResponse?
     
@@ -31,7 +32,7 @@ class WeatherDetailsVC: BaseViewController {
         super.loadView()
         let camera = GMSCameraPosition.camera(withLatitude:response?.locationLat ?? 0.0, longitude: response?.locationLng ?? 0.0, zoom: 12.0)
         mapView?.camera = camera
-
+        mapView?.settings.scrollGestures = false
     }
     private func renderUI(){
         tempLabel?.text = String(format: "%.1f", response?.data?.temp ?? 0.0)
@@ -40,7 +41,9 @@ class WeatherDetailsVC: BaseViewController {
         humidityLabel?.text = String(format: "%.1f%@", response?.data?.humidity ?? 0.0, "%" )
         precipitationLabel?.text = String(format: "%.1f", response?.data?.precipitation ?? 0.0)
         conditionImageView?.sd_setImage(with: response?.data?.conditionStatusImageUrl, completed: nil)
+        areaLabel?.text = "\(response?.area ?? "") - (\(String(format: "%.1f°F", response?.data?.temp ?? 0.0)))"
     }
+    
     
 
 }

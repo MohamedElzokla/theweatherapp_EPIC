@@ -134,6 +134,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		CE2094DE27487F5200692EFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */,
+				CE2094D8274845AC00692EFE /* APIResponse.swift */,
+				CE2094DC274862C200692EFE /* LocationBean.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CE3881F9274808C200D4FDF9 = {
 			isa = PBXGroup;
 			children = (
@@ -160,9 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				CE388205274808C200D4FDF9 /* AppDelegate.swift */,
-				CE2094D6274843F100692EFE /* WeatherDetailsResponse.swift */,
-				CE2094D8274845AC00692EFE /* APIResponse.swift */,
-				CE2094DC274862C200692EFE /* LocationBean.swift */,
+				CE2094DE27487F5200692EFE /* Model */,
 				CE2094CD27481DAD00692EFE /* Common */,
 				CE38824027480CEC00D4FDF9 /* Extensions */,
 				CE38823D27480C7C00D4FDF9 /* Managers */,

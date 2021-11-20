@@ -20,7 +20,7 @@
 "WeatherDetailsVC.humidity.title"="Humidity";
 "WeatherDetailsVC.condition.title"="Condition";
 "WeatherDetailsVC.precipitation.title"="Precipitation (in millimeters)";
-"WeatherDetailsVC.title"="Details";
+"WeatherDetailsVC.title"="Weather details";
 
 //alert
 "alert.title"="Alert";
