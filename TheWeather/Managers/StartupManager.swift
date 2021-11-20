@@ -14,6 +14,9 @@ class StartupManager: NSObject {
     static let shared = StartupManager()
     
     func run(){
+        
+        AppConstant.configurationMode = .development
+
         configureGoogleMaps()
         
         startAppView()
